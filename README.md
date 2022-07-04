@@ -18,7 +18,8 @@ implementation 'io.github.bytes-chaser:eazy-ssh-jsch:1.0.0'
 ```
 ### Usage 
 Use the [core project "usage" section](https://github.com/bytes-chaser/eazy-ssh-core/blob/main/README.md#usage) for full usage reference.
-The only step that may vary is [setting the context SSH implementation](https://github.com/bytes-chaser/eazy-ssh-core/blob/main/README.md#set-it-up)
+The only step that may vary is [setting the context SSH implementation](https://github.com/bytes-chaser/eazy-ssh-core/blob/main/README.md#set-it-up).
+These library intended to Use *JSch* SSH implementation
 ```java
         // New context with defaults
         ESSHContext context = new ESSHContextImpl();
@@ -32,3 +33,7 @@ The only step that may vary is [setting the context SSH implementation](https://
             .parser(MemoryInfo.class, new MemoryInfoParser())
             .create(Jsch::new)
 ```
+
+## Credits
+Special thanks to [JCraft](http://www.jcraft.com/contact.html ), that started JSch project
+and [Matthias Wiedemann](https://github.com/mwiede) for creating [fork for JSch](https://github.com/mwiede/jsch) and continuous support.
